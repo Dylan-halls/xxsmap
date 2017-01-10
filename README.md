@@ -33,6 +33,6 @@ If you where going to attack the Damn Vulnerably Web App for example you could u
     python3 xxsmap.py --address [http://192.168.1.164/dvwa/vulnerabilities/xss_r/?name=#] --cookie [security=medium PHPSESSID=6b2519e1646eb27e23bf1462c5dda253] --threads 10
 This will give you the ability to login to websites and exploit the otherwise hidden features and parameters.
 
-It can find and get round most forms of common xxs security filters but it can't seem to get past htmlspecialchars,
+It can find and get round most forms of common xxs security filters but it can't seem to get past htmlspecialchars and html enteties,
 the annoying thing about this is that if a xxs payload is sanitised by that filter it still shows up like it go through
 this means that when you get the succsess sign there is only about a 90% chance of it actually being vulnerable.
