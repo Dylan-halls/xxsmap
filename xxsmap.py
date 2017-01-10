@@ -489,8 +489,12 @@ class Controler(object):
 			print("\033[01m\033[34m[i] \033[00mShutting Down:", now.strftime("%Y-%m-%d %H:%M"))
 
 if __name__ == '__main__':
-	thread_count = 10
-	for i in range(thread_count):
-	    t = threading.Thread(target=Controler().control())
-	    t.deamon = True
-	    t.start()
+	try:
+		thread_count = 10
+		for i in range(thread_count):
+		    t = threading.Thread(target=Controler().control())
+		    t.deamon = True
+		    t.start()
+	except KeyboardInterrupt:
+		print("\n\033[01m\033[34m[i] \033[00mUser Requests Shutdown...")
+		print("\033[01m\033[34m[i] \033[00mShutting Down:", now.strftime("%Y-%m-%d %H:%M"))
